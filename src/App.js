@@ -6,7 +6,7 @@ const App = props => {
   return (
     <div>
       <Button.Basic varient={'red'}>
-        Basic button
+        Basic red button
       </Button.Basic>
     </div>
   )
