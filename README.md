@@ -1,68 +1,104 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Semantic-UI-ReactComponents
 
-## Available Scripts
+The only changed from Semantic-UI is JavaScript.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Elements](#Elements)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+----
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Elements
 
-### `npm test`
+## Button
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+import * as Button from 'Semantic-UI-ReactComponents/elements/Button'
+```
 
-### `npm run build`
+**Shared props**
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- varient (string): Additional className
+- primary (bool)
+- secondary (bool)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Button.Basic
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+<Button.Basic varient={'red'}>
+  Basic red button
+</Button.Basic>
+```
 
-### `npm run eject`
+- Icon button via `varient`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```js
+// import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<Button.Basic varient={'icon'}>
+  <Icon type={'paper plain'} />
+</Button.Basic>
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Labeled icon button via `varient`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```js
+// import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 
-## Learn More
+<Button.Basic varient={'labeled icon'}>
+  <Icon type={'pause'} />
+  Pause
+</Button.Basic>
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Basic button via `varient`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```js
+<Button.Basic varient={'basic'}>
+  The real basic button
+</Button.Basic>
+```
 
-### Code Splitting
+- Inverted button via `varient`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```js
+<Button.Basic varient={'inverted'}>
+  Black!
+</Button.Basic>
+```
 
-### Analyzing the Bundle Size
+### Button.Animated
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```js
+<Button.Animated varient={'red'} visibleContents={'Visible text'} hiddenContents={'Hidden text'} />
+```
 
-### Making a Progressive Web App
+### Button.Group
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```js
+<Button.Group>
+  <Button.Basic>One</Button.Basic>
+  <Button.Basic>Two</Button.Basic>
+  <Button.Basic>Three</Button.Basic>
+</Button.Group>
+```
 
-### Advanced Configuration
+- Icon buttons via `varient`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```js
+// import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 
-### Deployment
+<Button.Group>
+  <Button.Basic><Icon type={'bold'} /></Button.Basic>
+  <Button.Basic><Icon type={'underline'} /></Button.Basic>
+  <Button.Basic><Icon type={'text width'} /></Button.Basic>
+</Button.Group>
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Icon
 
-### `npm run build` fails to minify
+```js
+import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<Icon type={'paper plain'} />
+```
