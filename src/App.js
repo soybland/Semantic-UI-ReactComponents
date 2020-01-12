@@ -4,10 +4,11 @@ import * as Button from './elements/Button'
 
 const App = props => {
   return (
-    <Button.Animated
-      visibleContents={'Visible contents'}
-      hiddenContents={'Hidden contents'}
-    />
+    <div>
+      <Button.Basic varient={'red'}>
+        Basic button
+      </Button.Basic>
+    </div>
   )
 }
 

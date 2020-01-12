@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const AnimatedButton = props => {
-  const { children, animation, hiddenContents, visibleContents, ...inheritedProps } = props
+  const { children, varient, primary, secondary, animation, hiddenContents, visibleContents, ...inheritedProps } = props
 
   let classes = 'ui animated button'
 
@@ -10,9 +10,10 @@ const AnimatedButton = props => {
   if (props.secondary) classes += ' secondary'
 
   classes += ' ' + (animation || '')
+  classes += ' ' + (varient || '')
 
   return (
-    <div className={classes} {...inheritedProps} tabIndex={0}>
+    <a className={classes} {...inheritedProps} tabIndex={0}>
       <div className={'visible content'}>
         {visibleContents}
       </div>
@@ -21,12 +22,15 @@ const AnimatedButton = props => {
       </div>
 
       {children}
-    </div>
+    </a>
   )
 }
 
 AnimatedButton.propTypes = {
   children: PropTypes.any,
+  varient: PropTypes.string,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
   animation: PropTypes.string,
   visibleContents: PropTypes.any,
   hiddenContents: PropTypes.any
