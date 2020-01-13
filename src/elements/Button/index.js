@@ -1,10 +1,10 @@
 import Button from './Button'
-import AnimatedButton from './Animated'
 import ButtonGroup from './Group'
+import HiddenContent from './Animated/Hidden'
+import VisibleContent from './Animated/Visible'
+
+Button.Hidden = HiddenContent
+Button.Visible = VisibleContent
+Button.Group = ButtonGroup
 
 export default Button
-export {
-  Button as Basic,
-  ButtonGroup as Group,
-  AnimatedButton as Animated
-}
