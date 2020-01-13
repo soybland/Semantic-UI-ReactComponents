@@ -5,9 +5,7 @@ const Icon = props => {
   const { type, ...inheritedProps } = props
   const iconClass = (type || '') + ' icon'
 
-  return (
-    <i className={iconClass} {...inheritedProps} />
-  )
+  return <i className={iconClass} {...inheritedProps} />
 }
 
 Icon.propTypes = {

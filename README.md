@@ -6,14 +6,14 @@ The only changed from Semantic-UI is JavaScript.
 
 - [Elements](#Elements)
 
-----
+---
 
 # Elements
 
 ## Button
 
 ```js
-import * as Button from 'Semantic-UI-ReactComponents/elements/Button'
+import Button from 'Semantic-UI-ReactComponents/elements/Button'
 ```
 
 **Shared props**
@@ -22,64 +22,61 @@ import * as Button from 'Semantic-UI-ReactComponents/elements/Button'
 - primary (bool)
 - secondary (bool)
 
-### Button.Basic
+### Button
 
 ```js
-<Button.Basic varient={'red'}>
-  Basic red button
-</Button.Basic>
+<Button varient={'red'}>Basic red button</Button>
 ```
 
-- Icon button via `varient`
+- Icon button
 
 ```js
 // import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 
-<Button.Basic varient={'icon'}>
+<Button icon>
   <Icon type={'paper plain'} />
-</Button.Basic>
+</Button>
 ```
 
-- Labeled icon button via `varient`
+- Labeled icon button
 
 ```js
 // import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 
-<Button.Basic varient={'labeled icon'}>
+<Button labeled icon>
   <Icon type={'pause'} />
   Pause
-</Button.Basic>
+</Button>
 ```
 
-- Basic button via `varient`
+- Basic button
 
 ```js
-<Button.Basic varient={'basic'}>
-  The real basic button
-</Button.Basic>
+<Button basic>The real basic button</Button>
 ```
 
-- Inverted button via `varient`
+- Inverted button
 
 ```js
-<Button.Basic varient={'inverted'}>
-  Black!
-</Button.Basic>
+<Button inverted>Black!</Button>
 ```
 
-### Button.Animated
+- Animated button
 
 ```js
-<Button.Animated varient={'red'} visibleContents={'Visible text'} hiddenContents={'Hidden text'} />
+<Button.Animated varient={'red'}>
+  <Button.Visible>Visible content</Button.Visible>
+  <Button.Hidden>Hidden content</Button.Hidden>
+</Button.Animated>
 ```
 
 ### Button.Group
 
 ```js
 <Button.Group>
-  <Button.Basic>One</Button.Basic>
-  <Button.Basic>Two</Button.Basic>
-  <Button.Basic>Three</Button.Basic>
+  <Button>One</Button>
+  <Button>Two</Button>
+  <Button>Three</Button>
 </Button.Group>
 ```
 
@@ -89,9 +86,15 @@ import * as Button from 'Semantic-UI-ReactComponents/elements/Button'
 // import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 
 <Button.Group>
-  <Button.Basic><Icon type={'bold'} /></Button.Basic>
-  <Button.Basic><Icon type={'underline'} /></Button.Basic>
-  <Button.Basic><Icon type={'text width'} /></Button.Basic>
+  <Button>
+    <Icon type={'bold'} />
+  </Button>
+  <Button>
+    <Icon type={'underline'} />
+  </Button>
+  <Button>
+    <Icon type={'text width'} />
+  </Button>
 </Button.Group>
 ```
 
@@ -99,6 +102,71 @@ import * as Button from 'Semantic-UI-ReactComponents/elements/Button'
 
 ```js
 import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
+;<Icon type={'paper plain'} />
+```
 
-<Icon type={'paper plain'} />
+## Container
+
+```js
+<Container>Contained</Container>
+```
+
+- Text Container
+
+```js
+<Container text>Contained</Container>
+```
+
+- Aligned Container
+
+```js
+<Container align='right(or center, left, justified)'>Contained</Container>
+```
+
+- Fluid Container
+
+```js
+<Container fluid>Contained</Container>
+```
+
+## Divider
+
+```js
+<Divider />
+```
+
+- Hidden Divider
+
+```js
+<Divider hidden />
+```
+
+- Vertical Divider
+
+```js
+<Divider vertical />
+```
+
+- Horizontal Divider
+
+```js
+<Divider horizontal />
+```
+
+- Fitted Divider
+
+```js
+<Divider fitted />
+```
+
+- Setion Divider
+
+```js
+<Divider setion />
+```
+
+- Clearing Divider
+
+```js
+<Divider clearing />
 ```
