@@ -230,6 +230,7 @@ import Placeholder from 'Semantic-UI-ReactComponents/elements/Placeholder'
   <Placeholder line />
   <Placeholder line />
 </Placeholder>
+```
 
 - Paragraph placeholder
 
