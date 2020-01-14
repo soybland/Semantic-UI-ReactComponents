@@ -6,15 +6,27 @@ module.exports = {
     node: true
   },
   extends: [
-    'standard'
+    'standard',
+    'standard-react',
+    'prettier/react'
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2018
   },
   rules: {
+    indent: [
+      'error',
+      2,
+      {
+        SwitchCase: 1,
+        VariableDeclarator: 'first'
+      }
+    ],
+    'no-extend-native': 0 // NOTE: DO NOT OVERRIDE ORIGINAL FUNCTIONS.
   }
 }
