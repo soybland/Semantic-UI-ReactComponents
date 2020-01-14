@@ -10,6 +10,7 @@ The only changed from Semantic-UI is JavaScript.
   - [Container](#Container)
   - [Divider](#Divider)
   - [Placeholder](#Placeholder)
+  - [Header](#Header)
 
 ---
 
@@ -295,4 +296,151 @@ import Placeholder from 'Semantic-UI-ReactComponents/elements/Placeholder'
   <Placeholder line />
   <Placeholder line />
 </Placeholder.Group>
+```
+
+## Header
+
+```js
+import Header from 'Semantic-UI-ReactComponents/elements/Header'
+```
+
+### Varients
+
+- Content headers (considered as page headers)
+
+```js
+<Header huge>Huge header</Header>
+<Header large>Large header</Header>
+<Header medium>Medium header</Header>
+<Header small>Small header</Header>
+<Header tiny>Tiny header</Header>
+```
+
+- Icon headers
+
+```js
+// import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
+
+<Header icon>
+  <Icon type={'settings'} />
+  <Header.Content>
+    Account Settings
+    <Header sub>
+      Manage your account settings and set e-mail preferences.
+    </Header>
+  </Header.Content>
+</Header>
+```
+
+- Sub headers
+
+```js
+<Header sub>
+Price
+</Header>
+<span>$19.99</span>
+```
+
+- Subheaders
+
+```js
+<Header>
+  Account Settings
+  <Header.Sub>
+    Manage your account settings and set e-mail preferences.
+  </Header.Sub>
+</Header>
+```
+
+- Disabled headers
+
+```js
+<Header disabled>
+  Disabled header
+</Header>
+```
+
+- Dividing headers
+
+```js
+<Header dividing>
+Dividing header
+</Header>
+```
+
+- Block headers
+
+```js
+<Header block>
+Block header
+</Header>
+```
+
+- Attached headers
+
+```js
+<Header top attached>
+  Top attached
+</Header>
+<Header attached>
+  Attached
+</Header>
+<Header bottom attached>
+  Bottom attached
+</Header>
+```
+
+- Floating headers
+
+```js
+<Header right floated>
+  Go forward
+</Header>
+<Header left floated>
+  Go back
+</Header>
+```
+
+- Inverted headers
+
+```js
+<Header inverted>
+  Inverted!
+</Header>
+```
+
+### Text alignment
+
+```js
+<Header right aligned>
+  Right
+</Header>
+<Header left aligned>
+  Left
+</Header>
+<Header justified>
+  This should take up the full width even if only one line
+</Header>
+<Header center aligned>
+  Center>
+</Header>
+```
+
+### Colored
+
+- Colored headers via `varients`
+
+```js
+<Header varient={'red'}>Red</Header>
+<Header varient={'orange'}>Orange</Header>
+<Header varient={'yellow'}>Yellow</Header>
+<Header varient={'olive'}>Olive</Header>
+<Header varient={'green'}>Green</Header>
+<Header varient={'teal'}>Teal</Header>
+<Header varient={'blue'}>Blue</Header>
+<Header varient={'purple'}>Purple</Header>
+<Header varient={'violet'}>Violet</Header>
+<Header varient={'pink'}>Pink</Header>
+<Header varient={'brown'}>Brown</Header>
+<Header varient={'grey'}>Grey</Header>
 ```

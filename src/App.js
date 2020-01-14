@@ -4,6 +4,7 @@ import Button from './elements/Button'
 import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Placeholder from './elements/Placeholder'
+import Header from './elements/Header'
 
 const App = () => {
   return (
@@ -55,6 +56,13 @@ const App = () => {
           <Placeholder line />
           <Placeholder line />
         </Placeholder.Group>
+        <Divider />
+        <Header>
+          This is called header!
+          <Header sub>
+            and this is sub one!
+          </Header>
+        </Header>
       </Container>
     </div>
   )
