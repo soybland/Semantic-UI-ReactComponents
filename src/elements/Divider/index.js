@@ -38,7 +38,8 @@ Divider.propTypes = {
   fitted: PropTypes.bool,
   hidden: PropTypes.bool,
   section: PropTypes.bool,
-  clearing: PropTypes.bool
+  clearing: PropTypes.bool,
+  inverted: PropTypes.bool
 }
 
 export default Divider
