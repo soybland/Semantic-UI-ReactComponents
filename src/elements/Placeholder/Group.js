@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Placeholder = props => {
+const PlaceholderGroup = props => {
   const {
     children,
     varient,
@@ -25,7 +25,7 @@ const Placeholder = props => {
   )
 }
 
-Placeholder.propTypes = {
+PlaceholderGroup.propTypes = {
   children: PropTypes.any,
   varient: PropTypes.string,
   inverted: PropTypes.bool,
@@ -33,4 +33,4 @@ Placeholder.propTypes = {
   fluid: PropTypes.bool
 }
 
-export default Placeholder
+export default PlaceholderGroup
