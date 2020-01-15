@@ -23,37 +23,39 @@ const Header = props => {
     left,
     floated,
     justified,
-    varient,
+    varient = '',
     inverted,
     ...inheritedProps
   } = props
-  let classes = 'ui header'
+  const classes = ['ui', 'header']
 
-  if (huge) classes += ' huge'
-  if (large) classes += ' large'
-  if (medium) classes += ' medium'
-  if (small) classes += ' small'
-  if (tiny) classes += ' tiny'
-  if (icon) classes += ' icon'
-  if (sub) classes += ' sub'
-  if (center) classes += ' center'
-  if (aligned) classes += ' aligned'
-  if (disabled) classes += ' disabled'
-  if (dividing) classes += ' dividing'
-  if (block) classes += ' block'
-  if (top) classes += ' top'
-  if (bottom) classes += ' bottom'
-  if (attached) classes += ' attached'
-  if (right) classes += ' right'
-  if (left) classes += ' left'
-  if (floated) classes += ' floated'
-  if (justified) classes += ' justified'
-  if (inverted) classes += ' inverted'
+  if (huge) classes.push('huge')
+  if (large) classes.push('large')
+  if (medium) classes.push('medium')
+  if (small) classes.push('small')
+  if (tiny) classes.push('tiny')
+  if (icon) classes.push('icon')
+  if (sub) classes.push('sub')
+  if (center) classes.push('center')
+  if (aligned) classes.push('aligned')
+  if (disabled) classes.push('disabled')
+  if (dividing) classes.push('dividing')
+  if (block) classes.push('block')
+  if (top) classes.push('top')
+  if (bottom) classes.push('bottom')
+  if (attached) classes.push('attached')
+  if (right) classes.push('right')
+  if (left) classes.push('left')
+  if (floated) classes.push('floated')
+  if (justified) classes.push('justified')
+  if (inverted) classes.push('inverted')
 
-  classes += ' ' + (varient || '')
+  classes.push(varient.split(' '))
+
+  const classString = classes.join(' ')
 
   return (
-    <div className={classes} {...inheritedProps}>
+    <div className={classString} {...inheritedProps}>
       {children}
     </div>
   )

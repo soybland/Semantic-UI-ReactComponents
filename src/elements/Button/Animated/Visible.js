@@ -2,14 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const VisibleContent = props => {
-  const { children, varient, ...inheritedProps } = props
+  const { children, varient = '', ...inheritedProps } = props
 
-  let classes = 'visible content'
+  const classes = ['visible', 'content']
 
-  classes += ' ' + (varient || '')
+  classes.push(...varient.split(' '))
+
+  const classString = classes.join(' ')
 
   return (
-    <div className={classes} {...inheritedProps} tabIndex={0}>
+    <div className={classString} {...inheritedProps} tabIndex={0}>
       {children}
     </div>
   )

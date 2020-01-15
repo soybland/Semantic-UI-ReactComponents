@@ -16,28 +16,30 @@ const Placeholder = props => {
     header,
     paragraph,
     children,
-    varient,
+    varient = '',
     ...inheritedProps
   } = props
-  let classes = ''
+  const classes = []
 
-  if (line) classes += ' line'
-  if (full) classes += ' full'
-  if (veryLong) classes += ' very long'
-  if (long) classes += ' long'
-  if (medium) classes += ' medium'
-  if (short) classes += ' short'
-  if (veryShort) classes += ' very short'
-  if (square) classes += ' square'
-  if (rectangular) classes += ' rectangular'
-  if (image) classes += ' image'
-  if (header) classes += ' header'
-  if (paragraph) classes += ' paragraph'
+  if (line) classes.push('line')
+  if (full) classes.push('full')
+  if (veryLong) classes.push('very long')
+  if (long) classes.push('long')
+  if (medium) classes.push('medium')
+  if (short) classes.push('short')
+  if (veryShort) classes.push('very short')
+  if (square) classes.push('square')
+  if (rectangular) classes.push('rectangular')
+  if (image) classes.push('image')
+  if (header) classes.push('header')
+  if (paragraph) classes.push('paragraph')
 
-  classes += ' ' + (varient || '')
+  classes.push(varient.split(' '))
+
+  const classString = classes.join(' ')
 
   return (
-    <div className={classes} {...inheritedProps}>
+    <div className={classString} {...inheritedProps}>
       {children}
     </div>
   )

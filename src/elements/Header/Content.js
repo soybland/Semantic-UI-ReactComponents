@@ -4,15 +4,17 @@ import PropTypes from 'prop-types'
 const HeaderContent = props => {
   const {
     children,
-    varient,
+    varient = '',
     ...inheritedProps
   } = props
-  let classes = 'content'
+  const classes = ['content']
 
-  classes += ' ' + (varient || '')
+  classes.push(varient.split(' '))
+
+  const classString = classes.join(' ')
 
   return (
-    <div className={classes} {...inheritedProps}>
+    <div className={classString} {...inheritedProps}>
       {children}
     </div>
   )

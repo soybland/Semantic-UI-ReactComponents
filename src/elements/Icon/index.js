@@ -2,10 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Icon = props => {
-  const { type, ...inheritedProps } = props
-  const iconClass = (type || '') + ' icon'
+  const { type = '', ...inheritedProps } = props
 
-  return <i className={iconClass} {...inheritedProps} />
+  return <i className={`${type} icon`} {...inheritedProps} />
 }
 
 Icon.propTypes = {

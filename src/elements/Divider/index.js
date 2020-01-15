@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 const Divider = props => {
   const {
     children,
+    varient = '',
     vertical,
     horizontal,
     inverted,
@@ -13,19 +14,22 @@ const Divider = props => {
     clearing,
     ...inheritedProps
   } = props
+  const classes = ['ui', 'divider']
 
-  let classes = 'ui divider'
+  if (vertical) classes.push('vertical')
+  if (horizontal) classes.push('horizontal')
+  if (inverted) classes.push('inverted')
+  if (fitted) classes.push('fitted')
+  if (hidden) classes.push('hidden')
+  if (section) classes.push('section')
+  if (clearing) classes.push('clearing')
 
-  if (vertical) classes += ' vertical'
-  if (horizontal) classes += ' horizontal'
-  if (inverted) classes += ' inverted'
-  if (fitted) classes += ' fitted'
-  if (hidden) classes += ' hidden'
-  if (section) classes += ' section'
-  if (clearing) classes += ' clearing'
+  classes.push(varient.split(' '))
+
+  const classString = classes.join(' ')
 
   return (
-    <div className={classes} {...inheritedProps}>
+    <div className={classString} {...inheritedProps}>
       {children}
     </div>
   )
@@ -39,7 +43,8 @@ Divider.propTypes = {
   hidden: PropTypes.bool,
   section: PropTypes.bool,
   clearing: PropTypes.bool,
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  varient: PropTypes.string
 }
 
 export default Divider

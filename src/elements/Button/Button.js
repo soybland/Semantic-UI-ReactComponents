@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Button = props => {
   const {
     children,
-    varient,
+    varient = '',
     primary,
     secondary,
     animated,
@@ -17,24 +17,28 @@ const Button = props => {
     loading,
     ...inheritedProps
   } = props
+  const classes = ['ui', 'button']
 
-  let classes = 'ui button'
+  if (primary) classes.push('primary')
+  if (secondary) classes.push('secondary')
+  if (animated) {
+    classes.push('animated')
 
-  if (primary) classes += ' primary'
-  if (secondary) classes += ' secondary'
-  if (animated) classes += ' animated'
-  if (animated && typeof animation === 'string') classes += ` ${animation}`
-  if (labeled) classes += ' labeled'
-  if (icon) classes += ' icon'
-  if (basic) classes += ' basic'
-  if (inverted) classes += ' inverted'
-  if (disabled) classes += ' disabled'
-  if (loading) classes += ' loading'
+    if (typeof animated === 'string') classes.push(animated)
+  }
+  if (labeled) classes.push('labeled')
+  if (icon) classes.push('icon')
+  if (basic) classes.push('basic')
+  if (inverted) classes.push('inverted')
+  if (disabled) classes.push('disabled')
+  if (loading) classes.push('loading')
 
-  classes += ' ' + (varient || '')
+  classes.push(varient.split(' '))
+
+  const classString = classes.join(' ')
 
   return (
-    <a className={classes} {...inheritedProps}>
+    <a className={classString} {...inheritedProps}>
       {children}
     </a>
   )
