@@ -1,10 +1,13 @@
 import React from 'react'
 
 import Button from './elements/Button'
+import Icon from './elements/Icon'
 import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Placeholder from './elements/Placeholder'
 import Header from './elements/Header'
+import Image from './elements/Image'
+import Input from './elements/Input'
 
 const App = () => {
   return (
@@ -59,10 +62,42 @@ const App = () => {
         <Divider />
         <Header>
           This is called header!
-          <Header sub>
-            and this is sub one!
-          </Header>
+          <Header sub>and this is sub one!</Header>
         </Header>
+        <Divider />
+        <Header>Image with img tag</Header>
+        <Image
+          src='https://semantic-ui.com/images/wireframe/image.png'
+          size='small'
+        />
+        <Divider hidden />
+        <Header>Image with div and img tag</Header>
+        <Image size='small'>
+          <img
+            src='https://semantic-ui.com/images/wireframe/image.png'
+            alt=''
+          />
+        </Image>
+        <Divider hidden />
+        <Header>Image with a and img tag</Header>
+        <Image href='/' size='small'>
+          <img
+            src='https://semantic-ui.com/images/wireframe/image.png'
+            alt=''
+          />
+        </Image>
+        <Divider />
+        <Header>Normal input</Header>
+        <Input>
+          <input type='text' placeholder='Search...' />
+        </Input>
+        <Divider hidden />
+        <Header>Input with icon</Header>
+        <Input icon>
+          <input type='text' placeholder='Search...' />
+          <Icon type='search' />
+        </Input>
+        <Divider hidden />
       </Container>
     </div>
   )

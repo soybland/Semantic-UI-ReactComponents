@@ -2,7 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Container = props => {
-  const { children, text, align, fluid, varient = '', ...inheritedProps } = props
+  const {
+    children,
+    text,
+    align,
+    fluid,
+    varient = '',
+    ...inheritedProps
+  } = props
   const classes = ['ui', 'container']
 
   if (text) classes.push('text')
