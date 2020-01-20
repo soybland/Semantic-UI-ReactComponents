@@ -11,8 +11,6 @@ The only changed from Semantic-UI is JavaScript.
   - [Divider](#Divider)
   - [Placeholder](#Placeholder)
   - [Header](#Header)
-  - [Flag](#Flag)
-  - [Image](#Image)
 
 ---
 
@@ -20,13 +18,7 @@ The only changed from Semantic-UI is JavaScript.
 
 **Shared props**
 
-- variant (string): Additional className
-
-For example, if you want red button, add `red` to variant property.
-
-```js
-<Button variant={'red'}>Basic red button</Button>
-```
+- varient (string): Additional className
 
 ## Button
 
@@ -34,10 +26,10 @@ For example, if you want red button, add `red` to variant property.
 import Button from 'Semantic-UI-ReactComponents/elements/Button'
 ```
 
-### Variants
+### Varients
 
 ```js
-<Button variant={'red'}>Basic red button</Button>
+<Button varient={'red'}>Basic red button</Button>
 ```
 
 - Icon button
@@ -76,7 +68,7 @@ import Button from 'Semantic-UI-ReactComponents/elements/Button'
 - Animated button
 
 ```js
-<Button.Animated variant={'red'}>
+<Button.Animated varient={'red'}>
   <Button.Visible>Visible content</Button.Visible>
   <Button.Hidden>Hidden content</Button.Hidden>
 </Button.Animated>
@@ -116,7 +108,7 @@ import Button from 'Semantic-UI-ReactComponents/elements/Button'
 import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 ```
 
-### Variants
+### Varients
 
 ```js
 <Icon type={'paper plain'} />
@@ -128,7 +120,7 @@ import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
 import Container from 'Semantic-UI-ReactComponents/elements/Container'
 ```
 
-### Variants
+### Varients
 
 ```js
 <Container>Contained</Container>
@@ -158,7 +150,7 @@ import Container from 'Semantic-UI-ReactComponents/elements/Container'
 import Divider from 'Semantic-UI-ReactComponents/elements/Divider'
 ```
 
-### Variants
+### Varients
 
 ```js
 <Divider />
@@ -206,7 +198,7 @@ import Divider from 'Semantic-UI-ReactComponents/elements/Divider'
 import Placeholder from 'Semantic-UI-ReactComponents/elements/Placeholder'
 ```
 
-### Variants
+### Varients
 
 - Basic placeholder
 
@@ -312,7 +304,7 @@ import Placeholder from 'Semantic-UI-ReactComponents/elements/Placeholder'
 import Header from 'Semantic-UI-ReactComponents/elements/Header'
 ```
 
-### Variants
+### Varients
 
 - Content headers (considered as page headers)
 
@@ -436,339 +428,19 @@ Block header
 
 ### Colored
 
-- Colored headers via `variants`
+- Colored headers via `varients`
 
 ```js
-<Header variant={'red'}>Red</Header>
-<Header variant={'orange'}>Orange</Header>
-<Header variant={'yellow'}>Yellow</Header>
-<Header variant={'olive'}>Olive</Header>
-<Header variant={'green'}>Green</Header>
-<Header variant={'teal'}>Teal</Header>
-<Header variant={'blue'}>Blue</Header>
-<Header variant={'purple'}>Purple</Header>
-<Header variant={'violet'}>Violet</Header>
-<Header variant={'pink'}>Pink</Header>
-<Header variant={'brown'}>Brown</Header>
-<Header variant={'grey'}>Grey</Header>
-```
-
-## Flag
-
-```js
-import Flag from 'Semantic-UI-ReactComponents/elements/Flag'
-```
-
-### Variants
-
-```js
-<Icon country={'kr'} />
-```
-
-## Image
-
-```js
-import Image from 'Semantic-UI-ReactComponents/elements/Image'
-```
-
-### Variants
-
-- Normal image
-
-```js
-<Image src="https://semantic-ui.com/images/wireframe/image.png" alt="sample" />
-```
-
-- Image link
-
-```js
-<Image src="https://semantic-ui.com/images/wireframe/image-text.png" href="https://google.com/" alt="sampleToGoogle" />
-```
-
-- Hidden image
-
-```js
-<Image ... hidden />
-```
-
-- Avatar image
-
-```js
-<Image ... avatar />
-```
-
-- Bordered image
-
-```js
-<Image ... bordered />
-```
-
-- Fluid image
-
-```js
-<Image ... fluid />
-```
-
-- Rounded image
-
-```js
-<Image ... rounded />
-```
-
-- Circular image
-
-```js
-<Image ... circular />
-```
-
-- Vertically aligned image
-
-```js
-<Image ... aligned='vertically' />
-```
-
-- Cenetered image
-
-```js
-<Image ... centered />
-```
-
-- Spaced image
-
-```js
-<Image ... spaced='right' />
-```
-
-- Floated image
-
-```js
-<Image ... floated />
-```
-
-### Image sizes
-
-```js
-<Image ... size='mini' />
-<Image ... size='tiny' />
-<Image ... size='small' />
-<Image ... size='medium' />
-<Image ... size='large' />
-<Image ... size='big' />
-<Image ... size='huge' />
-<Image ... size='massive' />
-```
-
-### Image group
-
-```js
-<Image.Group size='tiny'>
-  <Image ... />
-  <Image ... />
-  <Image ... />
-</Image.Group>
-```
-
-## Label
-
-```js
-import Label from 'Semantic-UI-ReactComponents/elements/Label'
-```
-
-### Variants
-
-- Normal label (with Icon)
-
-```js
-// import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
-
-<Label>
-  <Icon type='paper plain' /> 23
-</Label>
-```
-
-- Image label
-
-In the official Semantic-UI documentation, it didn't take up `ui image` class names.
-
-```js
-<Label image>
-  <img src="https://semantic-ui.com/images/avatar/small/joe.jpg" />
-</Label>
-```
-
-- Pointing label
-
-```js
-// MISSING COMPONENT: FORM
-
-<Label ... pointing>
-  Please enter a value
-</Label>
-<Label ... pointing='right'>
-  Please enter a value
-</Label>
-```
-
-- Label at `corner`
-
-```js
-// import Image from 'Semantic-UI-ReactComponents/elements/Image'
-// import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
-
-<Image ... fluid>
-  <Label corner='left'>
-    <Icon type='paper plain' />
-  </Label>
-  <img src="https://semantic-ui.com/images/wireframe/image.png" />
-</Image>
-<Image ... fluid>
-  <Label corner='right'>
-    <Icon type='paper plain' />
-  </Label>
-  <img src="https://semantic-ui.com/images/wireframe/image.png" />
-</Image>
-```
-
-- Tagged label
-
-```js
-<Label tag>New</Label>
-```
-
-- Ribon label
-
-```js
-// MISSING COMPONENT: FORM
-// MISSING COMPONENT: SEGMENT
-
-<Label ribbon='right'>Specs</Label>
-```
-
-- Attached label
-
-```js
-<Label attached='top'>Top attached label</Label>
-<Label attached='bottom'>Bottom attached label</Label>
-<Label attached='right'>Right attached label</Label>
-<Label attached='left'>Left attached label</Label>
-```
-
-- Horizontal label
-
-```js
-<Label horizontal variant='red'>Fruit</Label>
-```
-
-- Floating label
-
-```js
-// MISSING COMPONENT: MENU
-
-<div class='item'>
-  Some menu item
-  <Label floating>
-    22
-  </Label>
-</div>
-```
-
-- Detailed label
-
-```js
-<Label>
-  Dogs
-  <Label.Detail>234</Label.Detail>
-</Label>
-```
-
-- Icon label
-
-```js
-// import Icon from 'Semantic-UI-ReactComponents/elements/Icon'
-
-<Label>
-  <Icon type='paper plain' />
-</Label>
-```
-
-- Image label
-
-```js
-// import Image from 'Semantic-UI-ReactComponents/elements/Image'
-
-<Label>
-  <Image avatar spaced='right' ... />
-  Elliot
-</Label>
-```
-
-- Linked label
-
-```js
-<Label href='https://google.com/'>
-  Google!
-</Label>
-```
-
-- Circular label
-
-```js
-<Label circular>
-  1
-</Label>
-```
-
-- Basic label
-
-```js
-<Label basic ...>
-  Basic
-</Label>
-```
-
-- Colored label via `variant`
-
-```js
-<Label basic variant='red'>
-  Red basic label! Also, it is colored.
-</Label>
-```
-
-### Label sizes
-
-```js
-<Label ... size='mini'>Mini</Label>
-<Label ... size='tiny'>Tiny</Label>
-<Label ... size='small'>Small</Label>
-<Label ... size='medium'>Medium</Label>
-<Label ... size='large'>Large</Label>
-<Label ... size='big'>Big</Label>
-<Label ... size='huge'>Huge</Label>
-<Label ... size='massive'>Massive</Label>
-```
-
-### Label group
-
-- Tagged label group
-
-```js
-<Label.Group tag>
-  /* Labels */
-</Label.Group>
-```
-
-- Circular label group
-
-```js
-<Label.Group circular>
-  /* Labels */
-</Label.Group>
-```
-
-- Colored label group via `variant`
-
-```js
-<Label.Group variant='blue'>
-  /* Labels */
-</Label.Group>
+<Header varient={'red'}>Red</Header>
+<Header varient={'orange'}>Orange</Header>
+<Header varient={'yellow'}>Yellow</Header>
+<Header varient={'olive'}>Olive</Header>
+<Header varient={'green'}>Green</Header>
+<Header varient={'teal'}>Teal</Header>
+<Header varient={'blue'}>Blue</Header>
+<Header varient={'purple'}>Purple</Header>
+<Header varient={'violet'}>Violet</Header>
+<Header varient={'pink'}>Pink</Header>
+<Header varient={'brown'}>Brown</Header>
+<Header varient={'grey'}>Grey</Header>
 ```
