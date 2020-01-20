@@ -7,7 +7,7 @@ const Container = props => {
     text,
     align,
     fluid,
-    varient = '',
+    variant = '',
     ...inheritedProps
   } = props
   const classes = ['ui', 'container']
@@ -20,7 +20,7 @@ const Container = props => {
     classes.push(align + ' aligned')
   }
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -36,7 +36,7 @@ Container.propTypes = {
   text: PropTypes.bool,
   align: PropTypes.string,
   fluid: PropTypes.bool,
-  varient: PropTypes.string
+  variant: PropTypes.string
 }
 
 export default Container

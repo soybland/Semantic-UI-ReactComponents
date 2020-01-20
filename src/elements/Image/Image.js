@@ -19,10 +19,11 @@ const Image = props => {
     spaced,
     floated,
     size,
-    varient = '',
+    variant = '',
     ...inheritedProps
   } = props
   const classes = ['ui', 'image']
+
   let Component = 'div'
 
   if (typeof src === 'string') {
@@ -40,11 +41,11 @@ const Image = props => {
   if (circular) classes.push('circular')
   if (aligned) classes.push(`${aligned} aligned`)
   if (centered) classes.push('centered')
-  if (spaced) classes.push('spaced')
+  if (spaced) classes.push(`${spaced} spaced`)
   if (floated) classes.push(`${floated} floated`)
   if (size) classes.push(size)
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -67,7 +68,7 @@ Image.propTypes = {
   href: PropTypes.string,
   hidden: PropTypes.bool,
   disabled: PropTypes.bool,
-  varient: PropTypes.bool,
+  variant: PropTypes.string,
   avatar: PropTypes.bool,
   bordered: PropTypes.bool,
   fluid: PropTypes.bool,

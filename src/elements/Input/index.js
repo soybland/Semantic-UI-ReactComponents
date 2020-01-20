@@ -15,7 +15,7 @@ const Input = props => {
     inverted,
     fluid,
     size,
-    varient = '',
+    variant = '',
     ...inheritedProps
   } = props
   const classes = ['ui', 'input']
@@ -28,31 +28,27 @@ const Input = props => {
   if (fluid) classes.push('fluid')
   if (size) classes.push(size)
   if (loading) {
-    if (typeof loading === 'string') {
-      classes.push(loading)
-    }
     classes.push('loading')
+
+    if (typeof loading === 'string') classes.push(loading)
   }
   if (icon) {
-    if (typeof icon === 'string') {
-      classes.push(icon)
-    }
     classes.push('icon')
+
+    if (typeof icon === 'string') classes.push(icon)
   }
   if (labeled) {
-    if (typeof labeled === 'string') {
-      classes.push(labeled)
-    }
     classes.push('labeled')
+
+    if (typeof labeled === 'string') classes.push(labeled)
   }
   if (action) {
-    if (typeof action === 'string') {
-      classes.push(action)
-    }
     classes.push('action')
+
+    if (typeof action === 'string') classes.push(action)
   }
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -65,7 +61,7 @@ const Input = props => {
 
 Input.propTypes = {
   children: PropTypes.any,
-  varient: PropTypes.string,
+  variant: PropTypes.string,
   focus: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   disabled: PropTypes.bool,
