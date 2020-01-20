@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Divider = props => {
   const {
     children,
-    variant = '',
+    varient = '',
     vertical,
     horizontal,
     inverted,
@@ -24,7 +24,7 @@ const Divider = props => {
   if (section) classes.push('section')
   if (clearing) classes.push('clearing')
 
-  classes.push(variant.split(' '))
+  classes.push(varient.split(' '))
 
   const classString = classes.join(' ')
 
@@ -44,7 +44,7 @@ Divider.propTypes = {
   section: PropTypes.bool,
   clearing: PropTypes.bool,
   inverted: PropTypes.bool,
-  variant: PropTypes.string
+  varient: PropTypes.string
 }
 
 export default Divider

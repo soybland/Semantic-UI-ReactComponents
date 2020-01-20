@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 const Subheader = props => {
   const {
     children,
-    variant = '',
+    varient = '',
     ...inheritedProps
   } = props
   const classes = ['content']
 
-  classes.push(variant.split(' '))
+  classes.push(varient.split(' '))
 
   const classString = classes.join(' ')
 
@@ -22,7 +22,7 @@ const Subheader = props => {
 
 Subheader.propTypes = {
   children: PropTypes.any,
-  variant: PropTypes.string
+  varient: PropTypes.string
 }
 
 export default Subheader

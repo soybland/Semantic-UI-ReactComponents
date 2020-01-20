@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Detail = props => {
-  const { children, variant = '', href, ...inheritedProps } = props
+  const { children, varient = '', href, ...inheritedProps } = props
   const classes = ['detail']
-
   let Component = 'div'
 
-  classes.push(variant.split(' '))
+  classes.push(varient.split(' '))
 
   const classString = classes.join(' ')
 
@@ -22,7 +21,7 @@ const Detail = props => {
 
 Detail.propTypes = {
   children: PropTypes.any,
-  variant: PropTypes.string,
+  varient: PropTypes.string,
   href: PropTypes.string
 }
 

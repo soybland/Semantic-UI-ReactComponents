@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Detail = props => {
   const {
     children,
-    variant = '',
+    varient = '',
     size,
     tag,
     circular,
@@ -16,7 +16,7 @@ const Detail = props => {
   if (tag) classes.push('tag')
   if (circular) classes.push('circular')
 
-  classes.push(variant.split(' '))
+  classes.push(varient.split(' '))
 
   const classString = classes.join(' ')
 
@@ -29,7 +29,7 @@ const Detail = props => {
 
 Detail.propTypes = {
   children: PropTypes.any,
-  variant: PropTypes.string,
+  varient: PropTypes.string,
   size: PropTypes.string,
   tag: PropTypes.bool,
   circular: PropTypes.bool,

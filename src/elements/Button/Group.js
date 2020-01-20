@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const ButtonGroup = props => {
-  const { children, variant = '', ...inheritedProps } = props
+  const { children, varient = '', ...inheritedProps } = props
   const classes = ['ui', 'buttons']
 
-  classes.push(variant.split(' '))
+  classes.push(varient.split(' '))
 
   const classString = classes.join(' ')
 
@@ -18,7 +18,7 @@ const ButtonGroup = props => {
 
 ButtonGroup.propTypes = {
   children: PropTypes.any,
-  variant: PropTypes.string
+  varient: PropTypes.string
 }
 
 export default ButtonGroup
