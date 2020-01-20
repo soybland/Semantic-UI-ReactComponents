@@ -14,14 +14,14 @@ const App = () => {
     <div>
       <Container>
         <Divider hidden />
-        <Button varient='red'>Red button</Button>
+        <Button variant='red'>Red button</Button>
         <Divider hidden />
-        <Button animated varient='red'>
+        <Button animated variant='red'>
           <Button.Visible>Animated button</Button.Visible>
           <Button.Hidden>Peekaboo!</Button.Hidden>
         </Button>
         <Divider hidden />
-        <Button varient='red' onClick={() => alert("And This'll happen!")}>
+        <Button variant='red' onClick={() => alert("And This'll happen!")}>
           Click this
         </Button>
         <Divider />

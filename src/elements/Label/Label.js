@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Label = props => {
   const {
     children,
-    varient = '',
+    variant = '',
     image,
     pointing,
     corner,
@@ -46,7 +46,7 @@ const Label = props => {
     if (typeof ribbon === 'string') classes.push(ribbon)
   }
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -61,7 +61,7 @@ const Label = props => {
 
 Label.propTypes = {
   children: PropTypes.any,
-  varient: PropTypes.string,
+  variant: PropTypes.string,
   image: PropTypes.bool,
   pointing: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   corner: PropTypes.string,

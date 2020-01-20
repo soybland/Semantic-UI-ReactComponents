@@ -15,7 +15,7 @@ const Input = props => {
     inverted,
     fluid,
     size,
-    varient = '',
+    variant = '',
     ...inheritedProps
   } = props
   const classes = ['ui', 'input']
@@ -48,7 +48,7 @@ const Input = props => {
     if (typeof action === 'string') classes.push(action)
   }
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -61,7 +61,7 @@ const Input = props => {
 
 Input.propTypes = {
   children: PropTypes.any,
-  varient: PropTypes.string,
+  variant: PropTypes.string,
   focus: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   disabled: PropTypes.bool,
