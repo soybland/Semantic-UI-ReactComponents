@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const VisibleContent = props => {
-  const { children, varient = '', ...inheritedProps } = props
+  const { children, variant = '', ...inheritedProps } = props
 
   const classes = ['visible', 'content']
 
-  classes.push(...varient.split(' '))
+  classes.push(...variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -19,7 +19,7 @@ const VisibleContent = props => {
 
 VisibleContent.propTypes = {
   children: PropTypes.any,
-  varient: PropTypes.string
+  variant: PropTypes.string
 }
 
 export default VisibleContent

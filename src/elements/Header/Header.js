@@ -23,7 +23,7 @@ const Header = props => {
     left,
     floated,
     justified,
-    varient = '',
+    variant = '',
     inverted,
     ...inheritedProps
   } = props
@@ -50,7 +50,7 @@ const Header = props => {
   if (justified) classes.push('justified')
   if (inverted) classes.push('inverted')
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -83,7 +83,7 @@ Header.propTypes = {
   floated: PropTypes.bool,
   justified: PropTypes.bool,
   inverted: PropTypes.bool,
-  varient: PropTypes.string
+  variant: PropTypes.string
 }
 
 export default Header

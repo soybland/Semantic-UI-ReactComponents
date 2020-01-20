@@ -16,7 +16,7 @@ const Placeholder = props => {
     header,
     paragraph,
     children,
-    varient = '',
+    variant = '',
     ...inheritedProps
   } = props
   const classes = []
@@ -34,7 +34,7 @@ const Placeholder = props => {
   if (header) classes.push('header')
   if (paragraph) classes.push('paragraph')
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -46,7 +46,7 @@ const Placeholder = props => {
 }
 
 Placeholder.propTypes = {
-  varient: PropTypes.string,
+  variant: PropTypes.string,
   line: PropTypes.bool,
   full: PropTypes.bool,
   veryLong: PropTypes.bool,
