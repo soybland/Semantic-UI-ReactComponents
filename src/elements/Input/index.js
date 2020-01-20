@@ -28,28 +28,24 @@ const Input = props => {
   if (fluid) classes.push('fluid')
   if (size) classes.push(size)
   if (loading) {
-    if (typeof loading === 'string') {
-      classes.push(loading)
-    }
     classes.push('loading')
+
+    if (typeof loading === 'string') classes.push(loading)
   }
   if (icon) {
-    if (typeof icon === 'string') {
-      classes.push(icon)
-    }
     classes.push('icon')
+
+    if (typeof icon === 'string') classes.push(icon)
   }
   if (labeled) {
-    if (typeof labeled === 'string') {
-      classes.push(labeled)
-    }
     classes.push('labeled')
+
+    if (typeof labeled === 'string') classes.push(labeled)
   }
   if (action) {
-    if (typeof action === 'string') {
-      classes.push(action)
-    }
     classes.push('action')
+
+    if (typeof action === 'string') classes.push(action)
   }
 
   classes.push(varient.split(' '))

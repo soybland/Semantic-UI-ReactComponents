@@ -21,6 +21,7 @@ const Label = props => {
     ...inheritedProps
   } = props
   const classes = ['ui', 'label']
+
   let Component = 'div'
 
   if (image) classes.push('image')
@@ -35,16 +36,14 @@ const Label = props => {
   if (size) classes.push(size)
 
   if (pointing) {
-    if (typeof pointing === 'string') {
-      classes.push(pointing)
-    }
     classes.push('pointing')
+
+    if (typeof pointing === 'string') classes.push(pointing)
   }
   if (ribbon) {
-    if (typeof ribbon === 'string') {
-      classes.push(ribbon)
-    }
     classes.push('ribbon')
+
+    if (typeof ribbon === 'string') classes.push(ribbon)
   }
 
   classes.push(varient.split(' '))

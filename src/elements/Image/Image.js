@@ -23,6 +23,7 @@ const Image = props => {
     ...inheritedProps
   } = props
   const classes = ['ui', 'image']
+
   let Component = 'div'
 
   if (typeof src === 'string') {
