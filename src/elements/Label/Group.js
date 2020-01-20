@@ -1,20 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const PlaceholderGroup = props => {
+const Detail = props => {
   const {
     children,
     variant = '',
-    inverted,
-    active,
-    fluid,
+    size,
+    tag,
+    circular,
     ...inheritedProps
   } = props
-  const classes = ['ui', 'placeholder']
+  const classes = ['ui', 'labels']
 
-  if (inverted) classes.push('inverted')
-  if (active) classes.push('active')
-  if (fluid) classes.push('fluid')
+  if (size) classes.push(size)
+  if (tag) classes.push('tag')
+  if (circular) classes.push('circular')
 
   classes.push(variant.split(' '))
 
@@ -27,12 +27,13 @@ const PlaceholderGroup = props => {
   )
 }
 
-PlaceholderGroup.propTypes = {
+Detail.propTypes = {
   children: PropTypes.any,
   variant: PropTypes.string,
-  inverted: PropTypes.bool,
-  active: PropTypes.bool,
-  fluid: PropTypes.bool
+  size: PropTypes.string,
+  tag: PropTypes.bool,
+  circular: PropTypes.bool,
+  href: PropTypes.string
 }
 
-export default PlaceholderGroup
+export default Detail
