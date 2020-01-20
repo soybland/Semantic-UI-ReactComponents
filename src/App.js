@@ -21,7 +21,7 @@ const App = () => {
           <Button.Hidden>Peekaboo!</Button.Hidden>
         </Button>
         <Divider hidden />
-        <Button varient='red' onClick={() => alert("And This'll happen!")}>
+        <Button varient='red' onClick={() => alert("And this will happen!")}>
           Click this
         </Button>
         <Divider />
