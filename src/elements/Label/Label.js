@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Label = props => {
   const {
     children,
-    varient = '',
+    variant = '',
     image,
     pointing,
     corner,
@@ -21,6 +21,7 @@ const Label = props => {
     ...inheritedProps
   } = props
   const classes = ['ui', 'label']
+
   let Component = 'div'
 
   if (image) classes.push('image')
@@ -35,19 +36,17 @@ const Label = props => {
   if (size) classes.push(size)
 
   if (pointing) {
-    if (typeof pointing === 'string') {
-      classes.push(pointing)
-    }
     classes.push('pointing')
+
+    if (typeof pointing === 'string') classes.push(pointing)
   }
   if (ribbon) {
-    if (typeof ribbon === 'string') {
-      classes.push(ribbon)
-    }
     classes.push('ribbon')
+
+    if (typeof ribbon === 'string') classes.push(ribbon)
   }
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -62,7 +61,7 @@ const Label = props => {
 
 Label.propTypes = {
   children: PropTypes.any,
-  varient: PropTypes.string,
+  variant: PropTypes.string,
   image: PropTypes.bool,
   pointing: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   corner: PropTypes.string,

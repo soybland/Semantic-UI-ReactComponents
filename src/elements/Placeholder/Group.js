@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const PlaceholderGroup = props => {
   const {
     children,
-    varient = '',
+    variant = '',
     inverted,
     active,
     fluid,
@@ -16,10 +16,12 @@ const PlaceholderGroup = props => {
   if (active) classes.push('active')
   if (fluid) classes.push('fluid')
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
+
+  const classString = classes.join(' ')
 
   return (
-    <div className={classes} {...inheritedProps}>
+    <div className={classString} {...inheritedProps}>
       {children}
     </div>
   )
@@ -27,7 +29,7 @@ const PlaceholderGroup = props => {
 
 PlaceholderGroup.propTypes = {
   children: PropTypes.any,
-  varient: PropTypes.string,
+  variant: PropTypes.string,
   inverted: PropTypes.bool,
   active: PropTypes.bool,
   fluid: PropTypes.bool

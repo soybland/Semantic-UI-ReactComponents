@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Button = props => {
   const {
     children,
-    varient = '',
+    variant = '',
     primary,
     secondary,
     animated,
@@ -33,7 +33,7 @@ const Button = props => {
   if (disabled) classes.push('disabled')
   if (loading) classes.push('loading')
 
-  classes.push(varient.split(' '))
+  classes.push(variant.split(' '))
 
   const classString = classes.join(' ')
 
@@ -46,7 +46,7 @@ const Button = props => {
 
 Button.propTypes = {
   children: PropTypes.any,
-  varient: PropTypes.string,
+  variant: PropTypes.string,
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   animated: PropTypes.bool,
