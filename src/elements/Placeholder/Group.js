@@ -18,8 +18,10 @@ const PlaceholderGroup = props => {
 
   classes.push(varient.split(' '))
 
+  const classString = classes.join(' ')
+
   return (
-    <div className={classes} {...inheritedProps}>
+    <div className={classString} {...inheritedProps}>
       {children}
     </div>
   )
