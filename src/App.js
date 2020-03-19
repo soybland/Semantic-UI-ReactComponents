@@ -8,6 +8,9 @@ import Placeholder from './elements/Placeholder'
 import Header from './elements/Header'
 import Image from './elements/Image'
 import Input from './elements/Input'
+import List from './elements/List'
+import Loader from './elements/Loader'
+import Rail from './elements/Rail'
 
 const App = () => {
   return (
@@ -97,6 +100,52 @@ const App = () => {
           <input type='text' placeholder='Search...' />
           <Icon type='search' />
         </Input>
+        <Divider hidden />
+        <Header>Normal List</Header>
+        <List>
+          <List.Item>Apple</List.Item>
+          <List.Item>Pears</List.Item>
+          <List.Item>Oranges</List.Item>
+        </List>
+        <Divider hidden />
+        <Header>Normal List with Icon</Header>
+        <List>
+          <List.Item>
+            <Icon type='users' />
+            <List.Content>Users</List.Content>
+          </List.Item>
+        </List>
+        <Divider hidden />
+        <Header>Loader</Header>
+        <div>
+          <Loader active size='big' inline />
+        </div>
+        <Divider hidden />
+        <Header>Rail</Header>
+        <div>
+          <Rail left>
+            <Placeholder.Group>
+              <Placeholder line />
+              <Placeholder line />
+            </Placeholder.Group>
+          </Rail>
+          <Rail right>
+            <Placeholder.Group>
+              <Placeholder line />
+              <Placeholder line />
+            </Placeholder.Group>
+          </Rail>
+          <Placeholder.Group>
+            <Placeholder line />
+            <Placeholder line />
+            <Placeholder line />
+            <Placeholder line />
+            <Placeholder line />
+            <Placeholder line />
+            <Placeholder line />
+            <Placeholder line />
+          </Placeholder.Group>
+        </div>
         <Divider hidden />
       </Container>
     </div>

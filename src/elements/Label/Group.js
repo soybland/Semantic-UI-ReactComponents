@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Detail = props => {
+const LabelGroup = props => {
   const {
     children,
     variant = '',
@@ -27,13 +27,12 @@ const Detail = props => {
   )
 }
 
-Detail.propTypes = {
+LabelGroup.propTypes = {
   children: PropTypes.any,
   variant: PropTypes.string,
   size: PropTypes.string,
   tag: PropTypes.bool,
-  circular: PropTypes.bool,
-  href: PropTypes.string
+  circular: PropTypes.bool
 }
 
-export default Detail
+export default LabelGroup
