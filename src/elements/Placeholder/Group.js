@@ -20,8 +20,6 @@ const PlaceholderGroup = props => {
 
   const classString = classes.join(' ')
 
-  const classString = classes.join(' ')
-
   return (
     <div className={classString} {...inheritedProps}>
       {children}
